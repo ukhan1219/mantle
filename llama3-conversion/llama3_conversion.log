@@ -1,0 +1,92 @@
+2025-05-05 01:11:11,857 | INFO     | MPS/CUDA not available or USE_CPU=True, falling back to CPU.
+2025-05-05 01:11:11,858 | INFO     | Using device: cpu, dtype: torch.float16
+2025-05-05 01:11:11,858 | INFO     | Starting Llama 3.2 (meta-llama/Llama-3.2-3B) stateful conversion process...
+2025-05-05 01:11:11,858 | DEBUG    | Loading LlamaForCausalLM model: meta-llama/Llama-3.2-3B...
+2025-05-05 01:11:12,027 | INFO     | Loaded model config for meta-llama/Llama-3.2-3B:
+2025-05-05 01:11:12,027 | INFO     |   - num_hidden_layers: 28
+2025-05-05 01:11:12,027 | INFO     |   - num_attention_heads: 24
+2025-05-05 01:11:12,027 | INFO     |   - num_key_value_heads: 8
+2025-05-05 01:11:12,027 | INFO     |   - hidden_size: 3072
+2025-05-05 01:11:12,028 | INFO     |   - vocab_size: 128256
+2025-05-05 01:12:51,791 | INFO     | Model meta-llama/Llama-3.2-3B loaded successfully onto cpu.
+2025-05-05 01:12:51,792 | INFO     | KV cache state buffer shape computed: (28, 1, 8, 2048, 128)
+2025-05-05 01:12:51,792 | INFO     |  (Layers=28, Batch=1, KV_Heads=8, Context=2048, HeadDim=128)
+2025-05-05 01:12:51,848 | DEBUG    | Initialized SliceUpdateKeyValueCache with K/V shape: (28, 1, 8, 2048, 128), dtype: torch.float16, device: cpu
+2025-05-05 01:12:51,848 | INFO     | Registered KV cache buffers ('keyCache', 'valueCache') from SliceUpdateKeyValueCache.
+2025-05-05 01:12:51,849 | INFO     | Tracing with: example_seq_len=2, causal mask kv_len=2
+2025-05-05 01:12:51,850 | INFO     | Example input_ids shape: torch.Size([1, 2]), dtype: torch.int32
+2025-05-05 01:12:51,850 | INFO     | Example causal_mask shape: torch.Size([1, 1, 2, 2]), dtype: torch.float16
+2025-05-05 01:12:51,850 | INFO     | Tracing the model with torch.jit.trace...
+2025-05-05 01:12:52,242 | DEBUG    | Wrapper forward called.
+2025-05-05 01:12:52,242 | DEBUG    |   Input IDs shape: torch.Size([1, 2]), dtype: torch.int32
+2025-05-05 01:12:52,243 | DEBUG    |   Causal Mask shape: torch.Size([1, 1, 2, 2]), dtype: torch.float16
+2025-05-05 01:12:52,243 | DEBUG    |   Calculated past_seen_tokens: 0 (Total: 2, Current: 2)
+2025-05-05 01:12:52,317 | DEBUG    | Updating Layer 0: start=0, end=2, new_len=2
+2025-05-05 01:12:52,323 | DEBUG    | Layer 0 updated K shape: torch.Size([1, 8, 2, 128]), V shape: torch.Size([1, 8, 2, 128])
+2025-05-05 01:12:52,604 | DEBUG    | Updating Layer 1: start=0, end=2, new_len=2
+2025-05-05 01:12:52,610 | DEBUG    | Layer 1 updated K shape: torch.Size([1, 8, 2, 128]), V shape: torch.Size([1, 8, 2, 128])
+2025-05-05 01:12:52,895 | DEBUG    | Updating Layer 2: start=0, end=2, new_len=2
+2025-05-05 01:12:52,901 | DEBUG    | Layer 2 updated K shape: torch.Size([1, 8, 2, 128]), V shape: torch.Size([1, 8, 2, 128])
+2025-05-05 01:12:53,180 | DEBUG    | Updating Layer 3: start=0, end=2, new_len=2
+2025-05-05 01:12:53,185 | DEBUG    | Layer 3 updated K shape: torch.Size([1, 8, 2, 128]), V shape: torch.Size([1, 8, 2, 128])
+2025-05-05 01:12:53,480 | DEBUG    | Updating Layer 4: start=0, end=2, new_len=2
+2025-05-05 01:12:53,486 | DEBUG    | Layer 4 updated K shape: torch.Size([1, 8, 2, 128]), V shape: torch.Size([1, 8, 2, 128])
+2025-05-05 01:12:53,779 | DEBUG    | Updating Layer 5: start=0, end=2, new_len=2
+2025-05-05 01:12:53,785 | DEBUG    | Layer 5 updated K shape: torch.Size([1, 8, 2, 128]), V shape: torch.Size([1, 8, 2, 128])
+2025-05-05 01:12:54,078 | DEBUG    | Updating Layer 6: start=0, end=2, new_len=2
+2025-05-05 01:12:54,083 | DEBUG    | Layer 6 updated K shape: torch.Size([1, 8, 2, 128]), V shape: torch.Size([1, 8, 2, 128])
+2025-05-05 01:12:54,380 | DEBUG    | Updating Layer 7: start=0, end=2, new_len=2
+2025-05-05 01:12:54,385 | DEBUG    | Layer 7 updated K shape: torch.Size([1, 8, 2, 128]), V shape: torch.Size([1, 8, 2, 128])
+2025-05-05 01:12:54,670 | DEBUG    | Updating Layer 8: start=0, end=2, new_len=2
+2025-05-05 01:12:54,675 | DEBUG    | Layer 8 updated K shape: torch.Size([1, 8, 2, 128]), V shape: torch.Size([1, 8, 2, 128])
+2025-05-05 01:12:54,971 | DEBUG    | Updating Layer 9: start=0, end=2, new_len=2
+2025-05-05 01:12:54,978 | DEBUG    | Layer 9 updated K shape: torch.Size([1, 8, 2, 128]), V shape: torch.Size([1, 8, 2, 128])
+2025-05-05 01:12:55,301 | DEBUG    | Updating Layer 10: start=0, end=2, new_len=2
+2025-05-05 01:12:55,307 | DEBUG    | Layer 10 updated K shape: torch.Size([1, 8, 2, 128]), V shape: torch.Size([1, 8, 2, 128])
+2025-05-05 01:12:55,591 | DEBUG    | Updating Layer 11: start=0, end=2, new_len=2
+2025-05-05 01:12:55,597 | DEBUG    | Layer 11 updated K shape: torch.Size([1, 8, 2, 128]), V shape: torch.Size([1, 8, 2, 128])
+2025-05-05 01:12:55,878 | DEBUG    | Updating Layer 12: start=0, end=2, new_len=2
+2025-05-05 01:12:55,884 | DEBUG    | Layer 12 updated K shape: torch.Size([1, 8, 2, 128]), V shape: torch.Size([1, 8, 2, 128])
+2025-05-05 01:12:56,171 | DEBUG    | Updating Layer 13: start=0, end=2, new_len=2
+2025-05-05 01:12:56,176 | DEBUG    | Layer 13 updated K shape: torch.Size([1, 8, 2, 128]), V shape: torch.Size([1, 8, 2, 128])
+2025-05-05 01:12:56,469 | DEBUG    | Updating Layer 14: start=0, end=2, new_len=2
+2025-05-05 01:12:56,475 | DEBUG    | Layer 14 updated K shape: torch.Size([1, 8, 2, 128]), V shape: torch.Size([1, 8, 2, 128])
+2025-05-05 01:12:56,768 | DEBUG    | Updating Layer 15: start=0, end=2, new_len=2
+2025-05-05 01:12:56,773 | DEBUG    | Layer 15 updated K shape: torch.Size([1, 8, 2, 128]), V shape: torch.Size([1, 8, 2, 128])
+2025-05-05 01:12:57,064 | DEBUG    | Updating Layer 16: start=0, end=2, new_len=2
+2025-05-05 01:12:57,070 | DEBUG    | Layer 16 updated K shape: torch.Size([1, 8, 2, 128]), V shape: torch.Size([1, 8, 2, 128])
+2025-05-05 01:12:57,358 | DEBUG    | Updating Layer 17: start=0, end=2, new_len=2
+2025-05-05 01:12:57,365 | DEBUG    | Layer 17 updated K shape: torch.Size([1, 8, 2, 128]), V shape: torch.Size([1, 8, 2, 128])
+2025-05-05 01:12:57,652 | DEBUG    | Updating Layer 18: start=0, end=2, new_len=2
+2025-05-05 01:12:57,658 | DEBUG    | Layer 18 updated K shape: torch.Size([1, 8, 2, 128]), V shape: torch.Size([1, 8, 2, 128])
+2025-05-05 01:12:57,951 | DEBUG    | Updating Layer 19: start=0, end=2, new_len=2
+2025-05-05 01:12:57,956 | DEBUG    | Layer 19 updated K shape: torch.Size([1, 8, 2, 128]), V shape: torch.Size([1, 8, 2, 128])
+2025-05-05 01:12:58,240 | DEBUG    | Updating Layer 20: start=0, end=2, new_len=2
+2025-05-05 01:12:58,245 | DEBUG    | Layer 20 updated K shape: torch.Size([1, 8, 2, 128]), V shape: torch.Size([1, 8, 2, 128])
+2025-05-05 01:12:58,528 | DEBUG    | Updating Layer 21: start=0, end=2, new_len=2
+2025-05-05 01:12:58,533 | DEBUG    | Layer 21 updated K shape: torch.Size([1, 8, 2, 128]), V shape: torch.Size([1, 8, 2, 128])
+2025-05-05 01:12:58,812 | DEBUG    | Updating Layer 22: start=0, end=2, new_len=2
+2025-05-05 01:12:58,817 | DEBUG    | Layer 22 updated K shape: torch.Size([1, 8, 2, 128]), V shape: torch.Size([1, 8, 2, 128])
+2025-05-05 01:12:59,114 | DEBUG    | Updating Layer 23: start=0, end=2, new_len=2
+2025-05-05 01:12:59,120 | DEBUG    | Layer 23 updated K shape: torch.Size([1, 8, 2, 128]), V shape: torch.Size([1, 8, 2, 128])
+2025-05-05 01:12:59,405 | DEBUG    | Updating Layer 24: start=0, end=2, new_len=2
+2025-05-05 01:12:59,411 | DEBUG    | Layer 24 updated K shape: torch.Size([1, 8, 2, 128]), V shape: torch.Size([1, 8, 2, 128])
+2025-05-05 01:12:59,704 | DEBUG    | Updating Layer 25: start=0, end=2, new_len=2
+2025-05-05 01:12:59,710 | DEBUG    | Layer 25 updated K shape: torch.Size([1, 8, 2, 128]), V shape: torch.Size([1, 8, 2, 128])
+2025-05-05 01:13:00,001 | DEBUG    | Updating Layer 26: start=0, end=2, new_len=2
+2025-05-05 01:13:00,008 | DEBUG    | Layer 26 updated K shape: torch.Size([1, 8, 2, 128]), V shape: torch.Size([1, 8, 2, 128])
+2025-05-05 01:13:00,316 | DEBUG    | Updating Layer 27: start=0, end=2, new_len=2
+2025-05-05 01:13:00,322 | DEBUG    | Layer 27 updated K shape: torch.Size([1, 8, 2, 128]), V shape: torch.Size([1, 8, 2, 128])
+2025-05-05 01:13:01,588 | DEBUG    |   Model forward pass completed. Output type: <class 'transformers.modeling_outputs.CausalLMOutputWithPast'>
+2025-05-05 01:13:01,589 | DEBUG    |   Returning logits shape: torch.Size([1, 2, 128256])
+2025-05-05 01:13:01,752 | INFO     | Tracing complete.
+2025-05-05 01:13:01,753 | DEBUG    | Defining Core ML input shapes with query_length=(1,2048) and key_value_length_dim=(1,2048)
+2025-05-05 01:13:01,754 | ERROR    | Unhandled exception during conversion:
+Traceback (most recent call last):
+  File "/Users/usmankhan/dev/dsiOS/llama3-conversion/stateful_convert_llama3_to_coreml.py", line 536, in <module>
+    main()
+  File "/Users/usmankhan/dev/dsiOS/llama3-conversion/stateful_convert_llama3_to_coreml.py", line 376, in main
+    wrapped_type=ct.TensorType(shape=model_wrapper.kv_cache_shape, dtype=np.int8) # Match model's float type
+  File "/Users/usmankhan/dev/dsiOS/llama3-conversion/.venv/lib/python3.9/site-packages/coremltools/converters/mil/input_types.py", line 253, in __init__
+    raise TypeError("dtype={} is unsupported for inputs/outputs of the model".format(dtype))
+TypeError: dtype=<class 'numpy.int8'> is unsupported for inputs/outputs of the model
