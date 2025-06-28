@@ -9,11 +9,9 @@ Mantle is an iOS-based chat application that runs powerful Large Language Models
 
 ## Demo
 
-*A screen-recorded demo will be available here. To embed a video, you can use a linked image like this:*
+*A screen-recorded demo of the app in action:*
 
-[![Mantle App Demo](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID)
-
-*(Replace `YOUTUBE_VIDEO_ID` with your video's ID)*
+[![Mantle App Demo](https://img.youtube.com/vi/J20uOGPSQi8/0.jpg)](https://www.youtube.com/watch?v=J20uOGPSQi8)
 
 ## 🚀 Project Purpose
 
